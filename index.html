@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Tutoré</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+    <!-- Début Site Paramètres  -->
+    <div class="setting-box">
+        <div class="toggler">
+            <i class="fa fa-gear fa-spin"></i>
+        </div>
+            
+        <div class="setting-container">
+            <div class="option-box">
+                <h4>Couleurs</h4>
+                <ul class="list">
+                    <li class="active" data-color="#ff5722"></li>
+                    <li data-color="#00bcd4"></li>
+                    <li data-color="#3f51b5"></li>
+                    <li data-color="#689f38"></li>
+                    <li data-color="#ff1744"></li>
+                </ul>
+            </div>
+
+            <div class="option-box">
+                <h4>Fond d'écran Aléatoire</h4>
+                <div class="backgr-option">
+                    <span class="yes active" data-background="yes">Oui</span>
+                    <span class="no" data-background="no">Non</span>
+                </div>
+            </div>
+
+            <div class="option-box">
+                <h4>Affichage les Balles</h4>
+                <div class="bullets-option">
+                    <span class="yes active" data-display="show">Oui</span>
+                    <span class="no" data-display="hide">Non</span>
+                </div>
+            </div>
+            <button class="reset">Restaurer Les Paramètres</button>
+        </div>  
+    </div>
+    <!-- Fin Site Paramètres -->
+
+    <!-- Début Boules -->
+    <div class="nav-bullets">
+        <div class="bullet" data-section=".container">
+            <div class="tooltip">A Propos</div>
+        </div>
+        <div class="bullet" data-section=".skills">
+            <div class="tooltip">Compétences</div>
+        </div>
+        <div class="bullet" data-section=".timeline">
+            <div class="tooltip">Projet</div>
+        </div>
+        <div class="bullet" data-section=".services">
+            <div class="tooltip">Expériences</div>
+        </div>
+        <div class="bullet" data-section=".testom">
+            <div class="tooltip">Notre Equipe</div>
+        </div>
+        <div class="bullet" data-section=".contact">
+            <div class="tooltip">Contact</div>
+        </div>
+    </div>
+    <!-- Fin Boules -->
+
+    <!-- Début Landing Page -->
+    <div class="landing-page">
+        <div class="overlay"></div>
+        <div class="header-area">
+            <div class="logo"><img src="imgs/logo.png"></div>
+            <div class="links-container">
+                <ul class="links open">
+                    <li><a href="#" class="active" data-section=".container">À Propos</a></li>
+                    <li><a href="" data-section=".skills">Compétences</a></li>
+                    <li><a href="" data-section=".timeline">Projet</a></li>
+                    <li><a href="" data-section=".services">Expériences</a></li>
+                    <li><a href="" data-section=".testom">Notre Equipe</a></li>
+                    <li><a href="" data-section=".contact">Contact</a></li>
+                </ul>
+
+                <button class="toggle-menu menu-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="introduction">
+            <!--div class="logo"><img src="imgs/logoblanche.png"></div -->
+            <h1>Groupe<span>AIMES</span></h1>
+            <p>Administrateurs Système </p>
+        </div>
+    </div>
+    <!-- Fin Landing Page -->
+
+    <!-- Début Section À Propos -->
+    <div class="container">
+        <div class="about">
+            <div class="bloc">
+                <h2>Qui sommes-nous</h2>
+                <p>On travaille actuellement sur un projet de déploiement d'une application web sur le cloud Azure pour le compte de l'école IPI, qui a pour but de:<br>
+                   - Montrer l'organisation et le travail en équipe.<br>
+                   - Justifier nos choix d'outils.<br>
+                   - Utiliser le plus de notions possibles, de connaissances vues au cours de la formation.<br>
+                </p>
+            </div>
+            <div class="image">
+                <img src="imgs/projet.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Fin Section À Propos -->
+
+    <!-- Début mes compétences -->
+    <div class="skills">
+        <div class="container">
+            <h2>Nos Compétences</h2>
+            <div class="skill-box">
+                <div class="skill-name">Linux</div>
+                <div class="skill-progress">
+                    <span data-progress="90%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">Docker</div>
+                <div class="skill-progress">
+                    <span data-progress="80%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">ITIL</div>
+                <div class="skill-progress">
+                    <span data-progress="75%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">PowerShell</div>
+                <div class="skill-progress">
+                    <span data-progress="60%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">Cloud Azure</div>
+                <div class="skill-progress">
+                    <span data-progress="70%"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin mes compétences -->
+
+    <!-- Début Chronologie -->
+    <div class="timeline">
+        <div class="container">
+            <div class="timeline-content">
+                <div class="year">Organisation de Groupe</div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Trello</h3>
+                        <h4>Création un compte.</h4>
+                        <p>Affecetr les tâches aux personnes</p>
+                        
+                    </div>    
+                </div>
+                
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Méthode Agile</h3>
+                        <h4>...</h4>
+                        <p>...</p>
+                    </div>    
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="year">Choisir les outils</div>
+                <div class="left">
+                    <div class="content">
+                        <h3>GitHub</h3>
+                        <h4>Création un compte pro .. </h4>
+                        <p>Créer un compte GitHub (compte ipi)</p>
+                        <p>Création un repository Projet_Group4 privé</p>
+                    </div>    
+                </div>
+                
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>PowerShell</h3>
+                        <h4>...</h4>
+                        <p>...</p>
+                        <p>...</p>
+                    </div>    
+                </div>
+
+
+                <div class="clearfix"></div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Docker</h3>
+                        <h4>...</h4>
+                        <p>...</p>
+                        <p>...</p>
+                    </div>    
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Cloud Azure</h3>
+                        <h4>...</h4>
+                        <p>...</p>
+                        
+                    </div>    
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="year">Déployer</div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Déployer</h3>
+                        <h4>...</h4>
+                        <p>...</p>
+                        
+                    </div>    
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Déployer</h3>
+                        <h4>...</h4>
+                        <p>...</p>
+                        
+                    </div>    
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="year">Tester</div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Tester</h3>
+                        <h4>...</h4>
+                        <p>...</p>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Chronologie -->
+
+    <!-- Début mes services -->
+    <div class="services">
+        <div class="container">
+            <h2>Nous connaissons aussi ..</h2>
+            <div class="bloc">
+                <div class="box">
+                    <img src="imgs/ph01.jpg" alt="">
+                    <h3>Windows Serveur et PowerShell</h3>
+                    <p>Windows Serveur est Fournir/Héberger des fichiers, gérer un annuaire (AD DS), gérer des certificats (AD CS), la configuration réseau (DHCP)... PowerShell est pour automatiser la gestion des systèmes. Il sert également à créer, à tester et à déployer des solutions.</p>
+                </div>
+                <div class="box">
+                    <img src="imgs/ph02.jpg" alt="">
+                    <h3>Linux et Shell Script</h3>
+                    <p>Linux est un système d’exploitation open source sécurisé permet de travialler plus efficacement et plus rapidement.</p>
+                </div>
+                <div class="box">
+                    <img src="imgs/ph03.jpg" alt="">
+                    <h3>Tests et Sécurité</h3>
+                    <p>La sécurité informatique actuellement est une discipline qui se veut de protéger l’intégrité et la confidentialité des informations stockées dans un système informatique.</p>
+                </div>
+                <div class="box">
+                    <img src="imgs/ph04.jpg" alt="">
+                    <h3>ITIL et DevOps</h3>
+                    <p></p>
+                </div>
+                <div class="box">
+                    <img src="imgs/ph05.png" alt="">
+                    <h3>Python et SQL</h3>
+                    <p></p>
+                </div>
+                <div class="box">
+                    <img src="imgs/ph06.jpg" alt="">
+                    <h3>Réseaux</h3>
+                    <p></p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin mes services -->
+
+    <!-- Début Témoingages -->
+    <div class="testom">
+        <div class="container">
+            <h2>Notre Equipe</h2>
+            <div class="testom-content">
+                <div class="ts-box">
+                    <div class="person-info">
+                        <!-- <img src="https://placehold.it/80/DDD" alt=""> -->
+                        <img src="imgs/persona01.jpg" alt="">
+                        <h4>Estelle</h4>
+                        <p>Quality Assurance</p>
+                    </div>
+                </div>
+                <div class="ts-box">
+                    <div class="person-info">
+                        <img src="imgs/persona02.jpg" alt="">
+                        <h4>Imène</h4>
+                        <p>Developer</p>
+                    </div>
+                </div>                
+                <div class="ts-box">
+                    <div class="person-info">
+                        <img src="imgs/persona03.jpg" alt="">
+                        <h4>Morgane</h4>
+                        <p>Release Manager</p>
+                    </div>
+                </div>
+                <div class="ts-box">
+                    <div class="person-info">
+                        <img src="imgs/persona04.png" alt="">
+                        <h4>Soumeya</h4>
+                        <p>Automatisation</p>
+                    </div>
+                </div>
+                <div class="ts-box">
+                    <!--<p>Il est manqnifique, très pointilleux sur les détails dans son travail</p>-->
+                    <div class="person-info">
+                        <img src="imgs/persona05.png" alt="">
+                        <h4>Ahmad</h4>
+                        <p>Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- Fin Témoingages -->
+
+    <!-- Début Contact -->
+    <div class="contact">
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            <form action="">
+                <div class="left">
+                    <input type="text" placeholder="Votre Prénom" name="prenom">
+                    <input type="text" placeholder="Votre Nom" name="nom">
+                    <input type="email" placeholder="Votre Mail" name="mail">
+                    <input type="text" placeholder="Sujet" name="sujet">
+                </div>
+                <div class="right">
+                    <textarea name="message" placeholder="Votre Message"></textarea>
+                    <input type="submit" value="Envoyer">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Fin Contact -->
+
+    <!-- Footer -->
+    <div class="footer">
+        Tous Droits Réservés 2022 Pour<span>&nbsp;Groupe AIMES &copy;</span>
+    </div>
+    <!-- Footer -->
+    
+
+
+
+    <script src="js/master.js"></script>
+</body>
+</html>
