@@ -188,18 +188,21 @@
                     <div class="content">
                         <h3>GitHub</h3>
                         <h4>Création un compte pro .. </h4>
-                        <p>Créer un compte GitHub (compte ipi)</p>
-                        <p>Création un repository Projet_Group4 privé</p>
+                        <p>o Créer un compte GitHub (compte ipi)<br>
+                           o Création un répertoire privé sous le nom <a href="https://github.com/soukram/Projet_Groupe4.git" style="text-decoration: none"; target="_blank">Projet_Group4</a> puis ajouter les collaborateurs concernés.
+                        </p>
                     </div>    
                 </div>
                 
                 <div class="clearfix"></div>
                 <div class="right">
                     <div class="content">
-                        <h3>PowerShell</h3>
-                        <h4>...</h4>
-                        <p>...</p>
-                        <p>...</p>
+                        <h3>Visual studio code + Git Bash</h3>
+                        <h4>Deux outils pour coder et monter sur GitHub</h4>
+                        <p>o Installation <a href="https://gitforwindows.org/" style="text-decoration: none"; target="_blank">Git Bash</a><br> 
+                           o Installation de Git sur vscode<br>o Installation les extensions Git Lien + Git Graph
+                        </p>
+                        
                     </div>    
                 </div>
 
@@ -207,10 +210,10 @@
                 <div class="clearfix"></div>
                 <div class="left">
                     <div class="content">
-                        <h3>Docker</h3>
-                        <h4>...</h4>
-                        <p>...</p>
-                        <p>...</p>
+                        <h3>Linux et Docker</h3>
+                        <h4>Système Linux sur machine virtuelle pour configurer Docker</h4>
+                        <p>o Configuration du dépôt Docker<br>o Configuration utilisateur<br>o Modification du service docker<br>o Mise en œuvre conteneur Docker<br>
+                            o Mise en œuvre conteneur Docker<br>o Créer une image (DockerFile) puis Pusher l’image sur le Cloud.</p>
                     </div>    
                 </div>
 
@@ -218,8 +221,8 @@
                 <div class="right">
                     <div class="content">
                         <h3>Cloud Azure</h3>
-                        <h4>...</h4>
-                        <p>...</p>
+                        <h4>Déployer l'image docker créée sur Microsoft Azure</h4>
+                        <p>o Création Azure Container Registry</p>
                         
                     </div>    
                 </div>
@@ -228,9 +231,18 @@
                 <div class="year">Déployer</div>
                 <div class="left">
                     <div class="content">
-                        <h3>Déployer</h3>
-                        <h4>...</h4>
-                        <p>...</p>
+                        <h3>Partie Git </h3>
+                        <h4>initialisation d’un répértoire local</h4>
+                        <p>$ git config --global user.name a.taha91@hotmail.com
+                           <br>$ git clone https://github.com/soukram/Projet_Groupe4.git 
+                           <br>$ cd Projet_Groupe4/
+                           <br>$ git init
+                           <br>$ nano index.html
+                           <br>$ git add .
+                           <br>$ git commit -m "premier"
+                           <br>$ git status
+                           <br>$ git push origin main
+                        </p>
                         
                     </div>    
                 </div>
@@ -238,9 +250,37 @@
                 <div class="clearfix"></div>
                 <div class="left">
                     <div class="content">
-                        <h3>Déployer</h3>
-                        <h4>...</h4>
-                        <p>...</p>
+                        <h3>Partie Docker</h3>
+                        <h4>Création une image docker à partir de DockerFile</h4>
+                        <p>Préparer les fichiers
+                            <br> ubuser@ub-srv-2:~$ mkdir Projet_GroupeAimes
+                           <br> ubuser@ub-srv-2:~$ cd Projet_GroupeAimes/
+                            <br>ubuser@ub-srv-2:~$ cp -r /home/ahmad/html .
+                            <br> ubuser@ub-srv-2:~$ cp -r /home/ahmad/conf.d/ .
+                            
+                            Création le fichier Dockerfile
+                            cat <<EOF > Dockerfile
+                            >FROM nginx:latest
+                            >ADD html/ /usr/share/nginx/html
+                            >ADD conf.d/default.conf /etc/nginx/conf.d
+                            >EOF
+                            
+                            Creation l'image
+                            docker images
+                            docker build -t registryaimes.azurecr.io/groupeaimes:1.2 .
+                            docker images
+                            
+                            Créer un conteneur
+                            docker run -d -p 80:80 --name aimes registryaimes.azurecr.io/groupeaimes:1.2
+                            
+                            Se connecter à Azure
+                            docker login registryaimes.azurecr.io
+                            
+                            Push l'image
+                            docker push registryaimes.azurecr.io/groupeaimes:1.2
+                            
+                            
+                            </p>
                         
                     </div>    
                 </div>
